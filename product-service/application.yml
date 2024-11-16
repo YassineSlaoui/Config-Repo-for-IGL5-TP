@@ -37,3 +37,7 @@ management:
     endpoint:
         info:
             enabled: true
+    health:
+        status:
+            http-mapping:
+                UP: 200
