@@ -21,13 +21,13 @@ eureka:
             defaultZone: http://localhost:8761/eureka/
         register-with-eureka: true
         fetch-registry: true
-    instance:
-        status: UP
+        region: default
 
 logging:
     level:
         root: INFO
         org.springframework.web: DEBUG
+        com.netflix.discovery: DEBUG
 
 management:
     endpoints:
@@ -37,7 +37,3 @@ management:
     endpoint:
         info:
             enabled: true
-    health:
-        status:
-            http-mapping:
-                UP: 200
