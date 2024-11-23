@@ -31,14 +31,14 @@ management:
     endpoints:
         web:
             exposure:
-                include: info,health,prometheus
+                include: "*"
     endpoint:
         info:
             enabled: true
 
-    prometheus:
-        metrics:
-            export:
+    metrics:
+        export:
+            prometheus:
                 enabled: true
 
 resilience4j:
