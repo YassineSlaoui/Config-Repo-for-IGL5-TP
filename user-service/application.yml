@@ -31,14 +31,14 @@ management:
     endpoints:
         web:
             exposure:
-                include: "*"
+                include: info,health,prometheus
     endpoint:
         info:
             enabled: true
 
-    metrics:
-        export:
-            prometheus:
+    prometheus:
+        metrics:
+            export:
                 enabled: true
                 
 resilience4j:
@@ -53,3 +53,13 @@ resilience4j:
                 limit-for-period: 5
                 limit-refresh-period: 1s
                 timeout-duration: 500ms
+    circuitbreaker:
+        instances:
+            productService:
+                registerHealthIndicator: true
+                slidingWindowSize: 100
+                permittedNumberOfCallsInHalfOpenState: 10
+                minimumNumberOfCalls: 10
+                waitDurationInOpenState: 10000
+                failureRateThreshold: 50
+                eventConsumerBufferSize: 10
