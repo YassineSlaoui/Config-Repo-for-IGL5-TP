@@ -31,16 +31,17 @@ management:
     endpoints:
         web:
             exposure:
-                include: info,health,prometheus
+                include: "*"
+
     endpoint:
-        info:
-            enabled: true
+        health:
+            show-details: always
 
     prometheus:
         metrics:
             export:
-                enabled: true
-                
+                enabled: true # Redundant, as the default value is already true
+
 resilience4j:
     retry:
         instances:

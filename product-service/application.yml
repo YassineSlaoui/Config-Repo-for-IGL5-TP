@@ -33,6 +33,15 @@ management:
             exposure:
                 include: "*"
 
+    endpoint:
+        health:
+            show-details: always
+
+    prometheus:
+        metrics:
+            export:
+                enabled: true # Redundant, as the default value is already true
+
 resilience4j:
     retry:
         instances:
