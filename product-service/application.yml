@@ -33,17 +33,6 @@ management:
             exposure:
                 include: "*"
 
-    endpoint:
-        health:
-            show-details: always
-        prometheus:
-            enabled: true
-
-    prometheus:
-        metrics:
-            export:
-                enabled: true
-
 resilience4j:
     retry:
         instances:
