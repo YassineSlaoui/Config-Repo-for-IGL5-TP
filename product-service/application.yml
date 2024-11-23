@@ -35,3 +35,16 @@ management:
     endpoint:
         info:
             enabled: true
+
+resilience4j:
+    retry:
+        instances:
+            myRetry:
+                max-attempts: 3
+                waitDuration: 500ms
+    ratelimiter:
+        instances:
+            myRateLimiter:
+                limit-for-period: 5
+                limit-refresh-period: 1s
+                timeout-duration: 500ms
