@@ -1,16 +1,6 @@
 spring:
     application:
         name: product-service
-    datasource:
-        url: jdbc:mysql://localhost:3306/ecommerce?createDatabaseIfNotExist=true
-        username: root
-        password: toor
-        driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-        hibernate:
-            ddl-auto: update
-        show-sql: true
-        database-platform: org.hibernate.dialect.MySQLDialect
 
 server:
     port: 8081
@@ -33,9 +23,15 @@ management:
             exposure:
                 include: "*"
 
-    metrics:
-        export:
-            prometheus:
+    endpoint:
+        health:
+            show-details: always
+        prometheus:
+            enabled: true
+
+    prometheus:
+        metrics:
+            export:
                 enabled: true
 
 resilience4j:
