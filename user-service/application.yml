@@ -36,11 +36,11 @@ management:
         info:
             enabled: true
 
-    prometheus:
-        metrics:
-            export:
+    metrics:
+        export:
+            prometheus:
                 enabled: true
-
+                
 resilience4j:
     retry:
         instances:
