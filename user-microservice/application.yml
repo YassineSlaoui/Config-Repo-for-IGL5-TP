@@ -2,7 +2,7 @@ spring:
     application:
         name: user-microservice
     datasource:
-        url: jdbc:mysql://localhost:3306/ecommerce?createDatabaseIfNotExist=true
+        url: jdbc:mysql://localhost:3306/ecommerce-user-microservice?createDatabaseIfNotExist=true
         username: root
         password: toor
         driver-class-name: com.mysql.cj.jdbc.Driver
