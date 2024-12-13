@@ -15,7 +15,6 @@ spring:
         loadbalancer:
             retry:
                 enabled: true
-            strategy: random
 
 server:
     port: 8082
