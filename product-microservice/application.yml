@@ -13,8 +13,8 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
     cloud:
         loadbalancer:
-          retry:
-              enabled: true
+            retry:
+                enabled: true
 
 server:
     port: 8081
