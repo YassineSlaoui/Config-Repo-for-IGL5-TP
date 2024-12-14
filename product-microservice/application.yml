@@ -19,7 +19,7 @@ spring:
 axon:
     eventhandling:
         processors:
-            "*":
+            default:
                 mode: tracking
                 source: eventStore
                 initial-segment-count: 1
