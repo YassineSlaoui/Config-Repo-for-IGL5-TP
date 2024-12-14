@@ -16,6 +16,14 @@ spring:
             retry:
                 enabled: true
 
+axon:
+    eventhandling:
+        processors:
+            "*":
+                mode: tracking
+                source: eventStore
+                initial-segment-count: 1
+
 server:
     port: 8082
 
